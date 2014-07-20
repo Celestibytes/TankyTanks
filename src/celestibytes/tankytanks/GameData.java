@@ -1,7 +1,7 @@
 package celestibytes.tankytanks;
 
-import celestibytes.tankytanks.tile.Tile;
-import celestibytes.tankytanks.tile.TileAir;
+import celestibytes.tankytanks.common.tile.Tile;
+import celestibytes.tankytanks.common.tile.TileAir;
 
 public class GameData {
 	public static Tile[] allTiles = new Tile[2048];
