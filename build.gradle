@@ -17,7 +17,7 @@ buildscript {
         }
         maven {
             name = "cbs"
-            url = "http://celestibytes.github.io/maven/"
+            url = "http://celestibytes.github.io/maven"
         }
     }
     dependencies {
@@ -28,19 +28,41 @@ buildscript {
 import static celestibytes.gradle.CelestiGradlePlugin.getTTVersion;
 
 group 'io.github.celestibytes'
-archivesBaseName = project.getName()
+// archivesBaseName = 'TankyTanks'
 
-version = getTTVersion(getProject(), "VERSION_NUMBER")
+version = "0.0.0" // getTTVersion("VERSION_NUMBER")
 
 ext.basePackage = 'celestibytes.tankytanks'
 ext.artifactsList = ['dev']
 ext.filesmaven = './maven' // TODO Just temp
 ext.versionCheck = false
 
-processResources {
+apply plugin: 'celestibytes'
+
+sourceSets {
+  main {
+    java {
+      srcDir 'src'
+    }
+    resources {
+      srcDir 'resources'
+    }
+  }
 }
 
-apply plugin: 'celestibytes'
+sourceSets {
+    main {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
+processResources {
+}
 
 uploadArchives {
 
