@@ -1,4 +1,4 @@
-package celestibytes.tankytanks.common;
+package celestibytes.tankytanks;
 
 public class Start {
 	
