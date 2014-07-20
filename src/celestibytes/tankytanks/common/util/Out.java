@@ -1,6 +1,6 @@
 package celestibytes.tankytanks.common.util;
 
-import celestibytes.tankytanks.Properties;
+import celestibytes.tankytanks.common.Properties;
 
 public class Out {
 	

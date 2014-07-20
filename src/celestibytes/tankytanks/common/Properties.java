@@ -1,4 +1,4 @@
-package celestibytes.tankytanks;
+package celestibytes.tankytanks.common;
 
 public class Properties {
 	

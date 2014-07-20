@@ -1,4 +1,4 @@
-package celestibytes.tankytanks;
+package celestibytes.tankytanks.common;
 
 import celestibytes.tankytanks.common.tile.Tile;
 import celestibytes.tankytanks.common.tile.TileAir;
