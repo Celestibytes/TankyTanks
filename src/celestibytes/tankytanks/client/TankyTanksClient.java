@@ -11,10 +11,9 @@ public class TankyTanksClient {
 	
 	private static Map map;
 	
-	public static void main(String[] args) {
+	public static void runGame() {
 		
 	}
-	
 	
 	public static float getDelta() {
 		return delta;
@@ -32,20 +31,6 @@ public class TankyTanksClient {
 	private static void render() {
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
