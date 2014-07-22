@@ -1,6 +1,7 @@
 package celestibytes.tankytanks.client.resource;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
@@ -13,7 +14,7 @@ import celestibytes.tankytanks.client.util.GLObjectType;
 import celestibytes.tankytanks.client.util.IGLObject;
 
 
-public class Texture implements IGLObject {
+public class Texture implements IGLObject, IResource {
 	
 	private int textureWidth;
 	private int textureHeight;
@@ -22,8 +23,17 @@ public class Texture implements IGLObject {
 	
 	private boolean hasAlpha = true;
 	
+	private Resource resource;
+	
 	protected Texture(Resource res) {
-		
+		this.resource = res;
+	}
+	
+	public void bindTexture() {
+		if(this.glTexId == -1) {
+			return;
+		}
+		GL11.glBindTexture(GL11.GL_TEXTURE_2D, this.glTexId);
 	}
 	
 	private void loadTexture(InputStream in) {
@@ -67,5 +77,15 @@ public class Texture implements IGLObject {
 	@Override
 	public boolean isInitialized() {
 		return glTexId != -1;
+	}
+
+	@Override
+	public File getFile() {
+		return resource != null ? resource.getFile() : null;
+	}
+
+	@Override
+	public ResourceType getResType() {
+		return ResourceType.TEXTURE;
 	}
 }

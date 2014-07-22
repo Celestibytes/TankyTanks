@@ -3,14 +3,27 @@ package celestibytes.tankytanks.client.resource;
 import java.io.File;
 
 public class Resource implements IResource {
-
-	@Override
-	public File getFile() {
-		return null;
+	
+	public static final String resDir = "../res";
+	
+	private String path;
+	
+	/**@param path - path in the resources dir*/
+	public Resource(String path) {
+		this.path = path;
 	}
 
 	@Override
-	public ResourceType getType() {
+	public File getFile() {
+		return new File(resourceDir(), path);
+	}
+
+	@Override
+	public ResourceType getResType() {
 		return null;
+	}
+	
+	private static File resourceDir() {
+		return new File(resDir);
 	}
 }

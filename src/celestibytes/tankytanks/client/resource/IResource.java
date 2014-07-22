@@ -5,5 +5,5 @@ import java.io.File;
 public interface IResource {
 	public File getFile();
 	
-	public ResourceType getType();
+	public ResourceType getResType();
 }
