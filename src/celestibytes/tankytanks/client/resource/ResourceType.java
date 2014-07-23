@@ -5,5 +5,6 @@ public enum ResourceType {
 	TEXTURE,
 	CONFIG,
 	DATA,
-	OTHER;
+	OTHER,
+	ANY;
 }

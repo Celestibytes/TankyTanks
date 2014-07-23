@@ -3,6 +3,7 @@ package celestibytes.tankytanks;
 import java.io.File;
 
 import celestibytes.tankytanks.client.TankyTanksClient;
+import celestibytes.tankytanks.client.render.FontRenderer;
 import celestibytes.tankytanks.common.util.Out;
 import celestibytes.tankytanks.common.util.Side;
 import celestibytes.tankytanks.util.CLArgHandler;
@@ -21,17 +22,6 @@ public class Start {
 			Out.err("argument handling failed, exiting...");
 			System.exit(-1);
 		}
-//		TankyTanksClient.runGame();
-//		System.out.println((int)'0');
-//		System.out.println((int)'1');
-//		System.out.println((int)'2');
-//		System.out.println((int)'3');
-//		System.out.println((int)'4');
-//		System.out.println((int)'5');
-//		System.out.println((int)'6');
-//		System.out.println((int)'7');
-//		System.out.println((int)'8');
-//		System.out.println((int)'9');
-		System.out.println((int)'\n');
+		TankyTanksClient.runGame();
 	}
 }

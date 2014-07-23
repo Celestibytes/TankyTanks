@@ -20,7 +20,7 @@ public class Resource implements IResource {
 
 	@Override
 	public ResourceType getResType() {
-		return null;
+		return ResourceType.ANY;
 	}
 	
 	private static File resourceDir() {
